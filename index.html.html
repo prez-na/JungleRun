@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jungle Dash</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><span>Jungle <b>Dash</b></span></div>
+      <div class="status-row" aria-label="Game status">
+        <div class="status-item"><span class="status-label">Score</span><strong id="score">0000</strong></div>
+        <div class="status-item"><span class="status-label">Coins</span><strong id="coins">0 / 12</strong></div>
+        <div class="status-item"><span class="status-label">Time</span><strong id="timer">90</strong></div>
+        <div class="hearts" id="hearts" aria-label="3 hearts">♥ ♥ ♥</div>
+      </div>
+    </header>
+
+    <section class="game-frame">
+      <div class="level-strip"><span><i></i> WORLD 01</span><strong>THE CANOPY TRAIL</strong><span id="progress">0%</span></div>
+      <div class="canvas-wrap">
+        <canvas id="game" width="1280" height="640" aria-label="Jungle Dash game"></canvas>
+        <div class="screen" id="start-screen">
+          <div class="screen-card intro-card">
+            <span class="eyebrow">A pocket-sized adventure</span>
+            <h1>Run wild.<br><em>Find the light.</em></h1>
+            <p>Dash through the canopy, collect the hidden treasures, and make it to the ancient gate.</p>
+            <button class="primary-button" id="play-button">Play game <span>→</span></button>
+            <div class="controls"><span><b>← →</b> or <b>A D</b> move</span><span><b>SPACE</b> jump</span></div>
+          </div>
+        </div>
+        <div class="screen hidden" id="end-screen">
+          <div class="screen-card result-card">
+            <span class="eyebrow" id="result-kicker">Trail complete</span>
+            <h2 id="result-title">You found the light.</h2>
+            <p id="result-copy">The jungle remembers a brave explorer.</p>
+            <div class="result-stats"><div><span>Score</span><strong id="final-score">0000</strong></div><div><span>Coins</span><strong id="final-coins">0 / 12</strong></div><div><span>Time</span><strong id="final-time">0s</strong></div></div>
+            <button class="primary-button" id="again-button">Run it again <span>↻</span></button>
+          </div>
+        </div>
+      </div>
+      <footer class="game-footer"><span><span class="key">SPACE</span> jump</span><span><span class="key">A</span><span class="key">D</span> move</span><span class="hint">Tip: jump on beetles to clear your path</span></footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
